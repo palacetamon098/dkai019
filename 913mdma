@@ -1,0 +1,40 @@
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Trigon" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Fluxus" or
+"Fluxus"
+                    local HttpService = game:GetService("HttpService")
+                     local Data =
+                        {
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "𝙑𝙞𝙚𝙬 𝙋𝙡𝙖𝙮𝙚𝙧 𝙋𝙧𝙤𝙛𝙞𝙡𝙚💻";
+                                    ["url"]= "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId;
+                                    ["description"]= "```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..") ```";
+                                    ["color"]= tonumber(0x06f9f1);
+                                     ["thumbnail"] = {["url"] = "https://cdn.discordapp.com/attachments/1201817711798386718/1202910855986024448/dakii_bgr.jpg?ex=65cf2d09&is=65bcb809&hm=481cd02f5426afdaf741a6e754daafd571e1e9a425004faaf71ac82f65c53874&"};
+                                    
+                                    ["fields"]= {
+                                        {
+                                            ["name"]= "𝙀𝙭𝙚𝙘𝙪𝙩𝙤𝙧📑",
+                                            ["value"]= "```"..ExecutorUsing.."```",
+                                            ["inline"]= true
+                                        },
+                                        {
+                                            ["name"]= "𝘼𝙜𝙚🗓",
+                                            ["value"]= "```"..game.Players.LocalPlayer.AccountAge.." Days```",
+                                            ["inline"]= true
+                                        },
+                                        {
+                                            ["name"]= "𝙎𝙘𝙧𝙞𝙥𝙩 𝙎𝙩𝙖𝙩𝙪𝙨📜",
+                                            ["value"]= "```Using Dakii Hub Main Blox Fruit!!!```",
+                                            ["inline"]= true
+                                        },
+                 
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final = {Url = "https://discord.com/api/webhooks/1202489571284221952/DKokhfOsZH5dbotoVZokws6uAkEe9AQt9_4-JRidbHjS_-jzWeVgPDWdsWUthpPmc8ey", Body = Encoded, Method = "POST", Headers = Headers}
+                    Request(Final)
